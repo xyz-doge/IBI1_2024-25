@@ -15,4 +15,4 @@ elif bmi < 18.5:
     category = "Underweight"
 else:
     category = "Normal" # Determine the BMI category based on the calculated BMI value
-print("The person's BMI is " + str(bmi) + " and he/she is  " + category + ".")# result
+print(f"The person's BMI is {bmi} and he/she is {category}.")# result
