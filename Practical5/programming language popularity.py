@@ -9,7 +9,8 @@ plt.title("Programming Language Popularity (2024)")# Defining an image title
 plt.xlabel("Programming Languages")#                 Define the Y-axis name
 plt.ylabel("Usage Percentage (%)")#                  Define the X-axis name
 plt.show()#                                          Image output
-
+percentage = input(' what percentage of programming languages used you want to know?')# input the question
+print(programming_languages_percentage[percentage])# Result output
 # Pseudocode
 #  Define a dictionary that holds the programming language and its usage
 #  Print the contents of the dictionary
@@ -20,3 +21,4 @@ plt.show()#                                          Image output
 #  Set the title of the chart to "Programming Language Popularity 2024"
 #  Set the X-axis title to "Programming Language" and the Y-axis title to Usage Percentage (%)
 #  Displaying the chart
+#  Ask questions about the programming language and give percentage output
