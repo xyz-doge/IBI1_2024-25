@@ -10,7 +10,7 @@ plt.xlabel("Programming Languages")#                 Define the Y-axis name
 plt.ylabel("Usage Percentage (%)")#                  Define the X-axis name
 plt.show()#                                          Image output
 percentage = input(' what percentage of programming languages used you want to know?')# input the question
-print(programming_languages_percentage[percentage])# Result output
+print(programming_languages_percentage[percentage],'%')# Result output
 # Pseudocode
 #  Define a dictionary that holds the programming language and its usage
 #  Print the contents of the dictionary
