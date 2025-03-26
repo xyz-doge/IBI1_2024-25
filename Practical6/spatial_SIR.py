@@ -1,28 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-# 创建一个100x100的地图，初始状态全部为0（健康）
-# np.zeros((100, 100)) 创建一个 100行 x 100列 的二维数组，所有值都是0
-population = np.zeros((100, 100), dtype=int)
-
-# 选一个随机点作为初始感染者
-# np.random.choice(range(100), 2) 从0到99中选两个数，作为x和y坐标
+population = np.zeros((100, 100), dtype=int)#   Created map with all initial status 0 (health)
+# Pick a random point as the initial infected person and its x and y coordinates
 outbreak = np.random.choice(range(100), 2)
 x = outbreak[0]
 y = outbreak[1]
-population[x][y] = 1  # 设置为感染者（1）
-
-# 设置参数
-beta = 0.3     # 被邻居感染的概率
-gamma = 0.05   # 康复的概率
-
-# 创建图像窗口，大小6x4英寸，清晰度150dpi
+population[x][y] = 1
+beta = 0.3     # Probability of being infected by someone nearby
+gamma = 0.05   # Probability of recovery
+# Create image window and set its data
 plt.figure(figsize=(6, 4), dpi=150)
 
 # 显示初始状态，使用“viridis”颜色映射：紫=健康，绿色=感染，黄=康复
 plt.imshow(population, cmap='viridis', interpolation='nearest')
 plt.title("Time = 0")   # 添加标题
-plt.savefig("spatial_t0.png")  # 保存图片为文件
+#plt.savefig("spatial_t0.png")  # 保存图片为文件
 plt.show()
 
 # 传播模拟，共进行100轮
@@ -65,5 +57,5 @@ for t in range(1, 101):
         plt.figure(figsize=(6, 4), dpi=150)
         plt.imshow(population, cmap='viridis', interpolation='nearest')
         plt.title("Time = " + str(t))
-        plt.savefig("spatial_t" + str(t) + ".png")
+        #plt.savefig("spatial_t" + str(t) + ".png")
         plt.show()

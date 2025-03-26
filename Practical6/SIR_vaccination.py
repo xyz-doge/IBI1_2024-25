@@ -9,9 +9,10 @@ for rate in vaccination_rates:
     gamma = 0.05     #康复率
     V = int(N * rate)
     S = N - V - 1      #易感染的人（除去第一个感染者）
-    S_list = [S]
+    S = N - V - 1
     if S < 0:
-        continue  
+       S = 0     # 强制设为0，表示没有易感者（100%的人都接种了）
+    S_list = [S]
     I = 1           #初始感染的人
     I_list = [I]         
     R = 0            #康复的人
@@ -33,5 +34,5 @@ plt.xlabel("Time")
 plt.ylabel("Number of individuals")
 plt.title("SIR Model with Vaccination")
 plt.legend(title="Vaccinated Rate")
-plt.savefig("sir_vaccination_basic.png")  # 可保存为文件
+#plt.savefig("sir_vaccination_basic.png")  # 可保存为文件
 plt.show()
