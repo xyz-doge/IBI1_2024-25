@@ -36,4 +36,16 @@ plt.legend()
 plt.savefig("sir_plot.png")  #  Save the image as a file, but add # in front of the code to avoid duplicate saving
 plt.show()
 
-
+# Pseudocode
+# 1. Initialize the model:
+#       Set total population, infection rate, recovery rate
+#       Initial state: most of them are susceptible, a small number of infected people, and no recovery
+#       Create a list to record the number of S, I, and R in each time step
+# 2. Cyclic simulation of disease transmission:
+#       Calculate the infection probability based on the current proportion of infected persons
+#       Simulate how many of the susceptible people are infected
+#       Simulate how many of those infected recovered
+#       Update the number of S, I, and R
+#       Record the current status
+# 3. Drawing display:
+#       Plot the trend of S, I and R over time as a line graph

@@ -52,3 +52,16 @@ for t in range(1, 101):
         plt.title("Time = " + str(t))
         #plt.savefig("spatial_t" + str(t) + ".png") # same as above
         plt.show()
+
+# Pseudocode
+#  First, draw an image of the initial state and see the distribution of the population at the beginning
+#  Next, we will start simulating the propagation process, with a total of 100 rounds of simulation:
+#-Copy the current population status in each round to avoid directly modifying the original image (keep it clear)
+#    Find the location of all current infected individuals
+#    For each infected individual, try to infect the surrounding 8 neighbors:
+#    Not dealing with oneself, only considering up, down, left, right, and diagonal angles
+#    If the neighbor has not been infected yet (is susceptible), give a probability of infection
+#    Using random numbers to determine whether neighbors have been successfully infected
+#    Each infected person still has a certain probability of recovering and becoming a 'recovered' state
+#  After each simulation round, update the population status of the entire map
+#  At specific time points (10th, 50th, 100th round), draw the current map to see the spread of the epidemic

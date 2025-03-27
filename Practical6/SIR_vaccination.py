@@ -39,3 +39,19 @@ plt.title("SIR Model with Vaccination")
 plt.legend(title="Vaccinated Rate")
 #plt.savefig("sir_vaccination_basic.png")   # Save the image as a file, but add # in front of the code to avoid duplicate saving
 plt.show()
+
+# Pseudocode
+#  First, set a set of different vaccination rates (ranging from 0% to 100%, with intervals of every 10%)
+#  For each vaccination rate, conduct a complete simulation:
+#     Assuming the total population is fixed, set the infection rate and recovery rate of the disease
+#     According to the vaccination rate, some people have been marked as "immune" in advance
+#     Initial state: 1 person infected, the rest are uninfected susceptible individuals
+#     Create a list to record the number of susceptible, infected, and recovered individuals at each time point
+#  Then start the time loop:
+#     Calculate the probability of infection based on the current number of infected individuals
+#     Randomly determine how many susceptible individuals are infected
+#     Randomly determine how many infected individuals will recover
+#     Update the numbers of the three groups and record them
+#  After this round of simulation is completed, draw the curve of the number of infected people's changes
+#  After running all vaccination rates, draw the results on a single graph
+#     Observe the differences in epidemic transmission under different vaccination rates
