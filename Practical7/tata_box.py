@@ -17,5 +17,11 @@ for line in Original:            # Read line by line
         sequence = ''            # Clear the old sequence for a new start
     else:
         sequence = sequence + line    # Splice the current line into the DNA sequence
+#   Process the last line separately
+if sequence != '':
+    has_tata = re.search(TATApattern, sequence)
+    if has_tata:
+        out.write(genename + '\n')
+        out.write(sequence + '\n')
 Original.close()
 out.close()                      # Close both files
