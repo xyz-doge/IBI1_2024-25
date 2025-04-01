@@ -1,38 +1,21 @@
-import re
-TATApattern = 'TATA[AT]A[AT]'
-f = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r')
-out = open('tata_genes.fa', 'w')
+import re                        # Introduce necessary function libraries
+TATApattern = 'TATA[AT]A[AT]'    # Define the composition of TATA
+Original = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') # Read original file
+out = open('tata_genes.fa', 'w') # Create a new file
 genename = ""
-sequence = ""
-# 一行一行读取
-for line in f:
-    line = line.strip()  # 去掉每行末尾的换行符
-
-    # 如果是基因名（以 > 开头）
-    if line.startswith('>'):
-        # 如果已经有前一条基因的序列了，先检查它
-        if sequence != '':
-            hastata = re.search(TATApattern, sequence)
-            if hastata:
+sequence = ""                    # Variable initialization
+for line in Original:            # Read line by line
+    line = line.strip()          # Keep useful characters
+    if line.startswith('>'):     # Judge whether the current line is a "gene name line"
+        if sequence != '':       # If read the last sequence, process it
+            hastata = re.search(TATApattern, sequence)# If you have read the last sequence, process it
+            if hastata:          # Perform matching processing
                 out.write(genename + '\n')
                 out.write(sequence + '\n')
-
-        # 保存新的基因名，只保留第一个单词
-        parts = line.split()
-        genename = '>' + parts[0][1:]  # 去掉开头的 >
-        sequence = ''  # 新基因开始，序列清空
-
+        parts = line.split()     # Take apart the line of gene name
+        genename = '>' + parts[0][1:] # Extract clean gene names
+        sequence = ''            # Clear the old sequence for a new start
     else:
-        # 是序列，把它加到当前的 sequence 中
-        sequence = sequence + line
-
-# 文件最后一条基因可能没被处理，我们手动再检查一次
-if sequence != '':
-    has_tata = re.search(TATApattern, sequence)
-    if has_tata:
-        out.write(genename + '\n')
-        out.write(sequence + '\n')
-
-# 关闭文件
-f.close()
-out.close()
+        sequence = sequence + line    # Splice the current line into the DNA sequence
+Original.close()
+out.close()                      # Close both files
