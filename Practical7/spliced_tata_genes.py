@@ -11,9 +11,9 @@ for line in Original:            # Read line by line
     if line.startswith('>'):     # Judge whether the current line is a "gene name line"
         if sequence != '':       # If read the last sequence, process it
             hastata = re.search(TATApattern, sequence)  # Check for TATA box
-            has_splice = splicepattern in sequence      # Check if splice pattern exists
+            has_splice = re.search(f'{splicepattern[:2]}[ATGC]*{splicepattern[2:]}', sequence) # Check if splice pattern exists
             if hastata and has_splice:          # Perform double matching
-                out.write(genename + '\n')
+                out.write(f'{genename} count: {len(re.findall(TATApattern, sequence))}' + '\n')
                 out.write(sequence + '\n')
         parts = line.split()     # Take apart the line of gene name
         genename = '>' + parts[0][1:] # Extract clean gene names
@@ -23,9 +23,9 @@ for line in Original:            # Read line by line
 #   Process the last line separately
 if sequence != '':
     hastata = re.search(TATApattern, sequence)  # Check for TATA box
-    has_splice = splicepattern in sequence      # Check for splice site
+    has_splice = re.search(f'{splicepattern[:2]}[ATGC]*{splicepattern[2:]}', sequence) # Check if splice pattern exists
     if hastata and has_splice:                  # Final double matching
-        out.write(genename + '\n')
+        out.write(f'{genename}  count: {len(re.findall(TATApattern, sequence))}' + '\n')
         out.write(sequence + '\n')
 Original.close()
 out.close()                      # Close both files
