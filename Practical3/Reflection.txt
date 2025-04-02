@@ -1,0 +1,30 @@
+Reflection on Practical 3: Getting Started with Git and GitHub
+In this practical, I learned the fundamentals of Git and GitHub, including version control, repository management, and website creation using GitHub Pages. The experience was both challenging and rewarding, providing me with a deeper understanding of how to use Git for collaborative projects.
+
+Key Takeaways
+Understanding Version Control
+
+I learned how Git tracks changes, enabling me to manage different versions of my files.
+The commands git init, git add, git commit, and git log were essential for maintaining my local repository.
+Managing a GitHub Repository
+
+Forking a repository and cloning it to my local machine was an important step.
+I encountered issues with git clone, where the destination path already existed, leading me to learn about removing or properly managing directories.
+I also faced errors related to missing remote repositories, which required me to manually configure git remote add origin.
+Branching and Merging
+
+Creating branches allowed me to work on different versions of my project independently.
+Merging changes from a feature branch into the main branch helped me understand how teams collaborate in real-world development environments.
+Resolving merge conflicts was a new challenge that deepened my understanding of how Git tracks changes between versions.
+Using GitHub Pages for Website Deployment
+
+Setting up a personal website using GitHub Pages was a great experience.
+Editing the index.md file and customizing my webpage helped me understand how Markdown and Jekyll themes work.
+Configuring _config.yml for theming allowed me to personalize the appearance of my webpage.
+Challenges Faced
+Initial Setup Issues: I encountered issues with missing Git components (git-remote-https) and had to reinstall Git to resolve them.
+Cloning Errors: I mistakenly attempted to clone into an existing directory, leading to Git errors. I learned to check the repository state using git status and git remote -v.
+Remote Repository Issues: The error 'origin' does not appear to be a git repository helped me understand how to manually add a remote repository.
+Merge Conflicts: While merging branches, I encountered conflicts, which required manual resolution using a text editor.
+Overall Learning Experience
+This practical significantly improved my Git skills and problem-solving abilities. The troubleshooting process helped me develop a structured approach to debugging errors. I now feel more confident in using Git for version control and collaborative projects. Moving forward, I aim to explore more advanced Git features like rebasing, interactive commits, and automating workflows with GitHub Actions.
