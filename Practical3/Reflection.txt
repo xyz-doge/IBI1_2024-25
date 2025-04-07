@@ -26,5 +26,5 @@ Initial Setup Issues: I encountered issues with missing Git components (git-remo
 Cloning Errors: I mistakenly attempted to clone into an existing directory, leading to Git errors. I learned to check the repository state using git status and git remote -v.
 Remote Repository Issues: The error 'origin' does not appear to be a git repository helped me understand how to manually add a remote repository.
 Merge Conflicts: While merging branches, I encountered conflicts, which required manual resolution using a text editor.
-Overall Learning Experience 
+Overall Learning Experience
 This practical significantly improved my Git skills and problem-solving abilities. The troubleshooting process helped me develop a structured approach to debugging errors. I now feel more confident in using Git for version control and collaborative projects. Moving forward, I aim to explore more advanced Git features like rebasing, interactive commits, and automating workflows with GitHub Actions.
