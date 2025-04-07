@@ -12,7 +12,7 @@ plt.axis('equal')#                                    Make sure the image is cir
 plt.show()  #                                         Output image                                                                    
 plt.pie(china_populations, labels=china_names,autopct='%.2f%%')#Plot the data image for china
 plt.axis('equal')#                                    Make sure the image is circular
-plt.show() #                                          Output image
+plt.show()       #                                    Output image
 
 # Pseudocode
 # Defines a list of names that defines the countries of the United Kingdom
