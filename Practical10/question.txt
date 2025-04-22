@@ -1,0 +1,8 @@
+Question:
+How has the DALYs changed in China over time?
+
+Answer location in dalys.py:
+Line 34
+
+Result discussion:
+From the early 1990s to recent years, DALYs in China have steadily declined. This is in line with expectations, and I believe it may be due to the improvement of healthcare and living standards over time. This downward trend indicates that China has made positive progress in public health.
