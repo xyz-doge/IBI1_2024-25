@@ -1,0 +1,22 @@
+1. UniProt Online BLAST Results
+
+Length of human SOD2 protein: 222 amino acids
+Subcellular localisation of human SOD2: Mitochondrion
+Range of percentage identities from BLAST hits: Approximately 58% to 100%
+Best match for mouse SOD2 (UniProt ID: P09671): 90.1% identity with human SOD2
+
+2. Python Sequence Alignment Results
+
+Comparison             BLOSUM62 Score      Percentage Identity
+--------------------------------------------------------------
+Human vs Mouse               1097                 90.09%
+Human vs Random              -208                  5.41%
+Mouse vs Random              -209                  4.50%
+
+3. Interpretation
+
+The sequence alignment results show that human and mouse SOD2 proteins are highly conserved, with a BLOSUM62 score of 1097 and a percentage identity of 90.09%. This is consistent with the BLAST result showing 90.1% identity, confirming the evolutionary relationship between these two species.
+
+In contrast, both the human-random and mouse-random comparisons yielded very low BLOSUM62 scores and low identity percentages (5.41% and 4.50%), indicating that the random sequence does not represent a biologically related protein.
+
+Therefore, the human and mouse SOD2 sequences are the most closely related pair among the three comparisons.
