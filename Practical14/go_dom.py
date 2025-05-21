@@ -1,5 +1,5 @@
 #   Import required modules
-import xml.dom.minidom
+import xml
 import time
 
 #   Define the function to process the XML file using DOM
