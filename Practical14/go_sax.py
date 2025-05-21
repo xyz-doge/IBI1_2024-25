@@ -86,3 +86,4 @@ def main():
 
 #   Run the script
 main()
+#  Sax analysis method is faster than Dom
