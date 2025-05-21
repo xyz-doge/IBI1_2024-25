@@ -1,5 +1,5 @@
 #   Import required modules
-import xml
+import xml.dom.minidom
 import time
 
 #   Define the function to process the XML file using DOM
@@ -9,10 +9,9 @@ def find_max_is_a_dom(filename):
 
     #   Load and parse the XML file
     dom_tree = xml.dom.minidom.parse(filename)
-    root = dom_tree.documentElement
 
     #   Get all <term> elements
-    terms = root.getElementsByTagName("term")
+    terms = dom_tree.getElementsByTagName("term")
 
     #   Prepare dictionary to record max is_a counts for each ontology
     max_is_a = {
