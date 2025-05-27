@@ -3,12 +3,11 @@
 Length of human SOD2 protein: 222 amino acids
 Subcellular localisation of human SOD2: Mitochondrion
 Range of percentage identities from BLAST hits: Approximately 58% to 100%
-Best match for mouse SOD2 (UniProt ID: P09671): 90.1% identity with human SOD2
+Range of mouse SOD2 (UniProt ID: P09671) with human : 83.2% to 100%
 
 2. Python Sequence Alignment Results
 
 Comparison             BLOSUM62 Score      Percentage Identity
---------------------------------------------------------------
 Human vs Mouse               1097                 90.09%
 Human vs Random              -208                  5.41%
 Mouse vs Random              -209                  4.50%
