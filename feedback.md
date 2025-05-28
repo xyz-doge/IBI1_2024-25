@@ -1,4 +1,4 @@
-Feedback received :
+Feedback received : 
 - Week 3: "Commit messages for Week 3 should be informative."
 - I reviewed the commit messages in Week 3. Some earlier messages were too vague, such as "update" or "finish practical3".
 - I revised them to be more specific and meaningful. For example, I changed one commit message to: "check the completion status of practical3"* 
