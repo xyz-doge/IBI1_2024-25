@@ -140,4 +140,4 @@ def main():
     #   Compare time
     print(f"\nComparison: SAX is {'faster' if sax_time < dom_time else 'slower'} than DOM by {abs(dom_time - sax_time):.4f} seconds.")
 #   Run the program
-main()
+main() 
